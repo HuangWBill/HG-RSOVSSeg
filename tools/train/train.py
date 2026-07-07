@@ -11,51 +11,7 @@ import os
 
 def parse_args():
     parser = argparse.ArgumentParser(description='Train a segmentor')
-    '''
-    # catseg_vitl14
-    parser.add_argument('--config', default='code/mmsegmentation/projects/HG-RSOVSSeg/configs/Globe230k_my_model_512/catseg_vitl14_4xb2-80k_globe230k-512x512.py',help='train config file path')
-    parser.add_argument('--work-dir', default='result/HG-RSOVSSeg/Globe230k_512/catseg_clipvitl14_frozenall_224',help='the dir to save logs and models')
-
-    # lseg_vitl14
-    parser.add_argument('--config', default='code/mmsegmentation/projects/HG-RSOVSSeg/configs/Globe230k_my_model_512/lseg_vitl14_4xb2-80k_globe230k-512x512.py',help='train config file path')
-    parser.add_argument('--work-dir', default='result/HG-RSOVSSeg/Globe230k_512/lseg_clipvitl14_frozenall_224',help='the dir to save logs and models')
-
-    # san_vitl14
-    parser.add_argument('--config', default='code/mmsegmentation/projects/HG-RSOVSSeg/configs/Globe230k_my_model_512/san_vitl14_4xb2-80k_globe230k-512x512.py',help='train config file path')
-    parser.add_argument('--work-dir', default='result/HG-RSOVSSeg/Globe230k_512/san_clipvitl14',help='the dir to save logs and models')
-   
-    # fusioner_vitl14
-    parser.add_argument('--config', default='code/mmsegmentation/projects/HG-RSOVSSeg/configs/Globe230k_my_model_512/fusioner_vitl14_4xb2-80k_globe230k-512x512.py',help='train config file path')
-    parser.add_argument('--work-dir', default='result/HG-RSOVSSeg/Globe230k_512/fusioner_clipvitl14',help='the dir to save logs and models')
- 
-    # HG-RSOVSSeg_UnHGU_UnTAM_vitl14
-    parser.add_argument('--config', default='code/mmsegmentation/projects/HG-RSOVSSeg/configs/Globe230k_my_model_512/HG-RSOVSSeg_unhgu_untam_vitl14_4xb2-80k_globe230k-512x512.py',help='train config file path')
-    parser.add_argument('--work-dir', default='result/HG-RSOVSSeg/Globe230k_512/HG-RSOVSSeg_UnHGU_UnTAM_clipvitl14_frozenall',help='the dir to save logs and models')
     
-    # HG-RSOVSSeg_UnTAM_vitl14
-    parser.add_argument('--config', default='code/mmsegmentation/projects/HG-RSOVSSeg/configs/Globe230k_my_model_512/HG-RSOVSSeg_untam_vitl14_4xb2-80k_globe230k-512x512.py',help='train config file path')
-    parser.add_argument('--work-dir', default='result/HG-RSOVSSeg/Globe230k_512/HG-RSOVSSeg_UnTAM_clipvitl14_frozenall',help='the dir to save logs and models')
-    
-    # HG-RSOVSSeg_vitb16
-    parser.add_argument('--config', default='code/mmsegmentation/projects/HG-RSOVSSeg/configs/Globe230k_my_model_512/HG-RSOVSSeg_vitb16_4xb2-80k_globe230k-512x512.py',help='train config file path')
-    parser.add_argument('--work-dir', default='result/HG-RSOVSSeg/Globe230k_512/HG-RSOVSSeg_clipvitb16_frozenall_512_128-64/',help='the dir to save logs and models')
-
-    # HG-RSOVSSeg_vitb32
-    parser.add_argument('--config', default='code/mmsegmentation/projects/HG-RSOVSSeg/configs/Globe230k_my_model_512/HG-RSOVSSeg_vitb32_4xb2-80k_globe230k-512x512.py',help='train config file path')
-    parser.add_argument('--work-dir', default='result/HG-RSOVSSeg/Globe230k_512/HG-RSOVSSeg_clipvitb32_frozenall_512_128-64/',help='the dir to save logs and models')
-    
-    # HG-RSOVSSeg_vitl14_10
-    parser.add_argument('--config', default='code/mmsegmentation/projects/HG-RSOVSSeg/configs/Globe230k_my_model_512/HG-RSOVSSeg_vitl14_4xb2-80k_globe230k-512x512_10.py',help='train config file path')
-    parser.add_argument('--work-dir', default='result/HG-RSOVSSeg/Globe230k_512/HG-RSOVSSeg_clipvitl14_frozenall_512_128-64_10/',help='the dir to save logs and models')
-    
-    # HG-RSOVSSeg_vitl14_30
-    parser.add_argument('--config', default='code/mmsegmentation/projects/HG-RSOVSSeg/configs/Globe230k_my_model_512/HG-RSOVSSeg_vitl14_4xb2-80k_globe230k-512x512_30.py',help='train config file path')
-    parser.add_argument('--work-dir', default='result/HG-RSOVSSeg/Globe230k_512/HG-RSOVSSeg_clipvitl14_frozenall_512_128-64_30/',help='the dir to save logs and models')
-
-    # HG-RSOVSSeg_vitl14_50
-    parser.add_argument('--config', default='code/mmsegmentation/projects/HG-RSOVSSeg/configs/Globe230k_my_model_512/HG-RSOVSSeg_vitl14_4xb2-80k_globe230k-512x512_50.py',help='train config file path')
-    parser.add_argument('--work-dir', default='result/HG-RSOVSSeg/Globe230k_512/HG-RSOVSSeg_clipvitl14_frozenall_512_128-64_50/',help='the dir to save logs and models')
-    '''
     # HG-RSOVSSeg_vitl14
     parser.add_argument('--config', default='code/mmsegmentation/projects/HG-RSOVSSeg/configs/Globe230k_my_model_512/HG-RSOVSSeg_vitl14_4xb2-80k_globe230k-512x512.py',help='train config file path')
     parser.add_argument('--work-dir', default='result/HG-RSOVSSeg/Globe230k_512/HG-RSOVSSeg_clipvitl14_frozenall_512_128-64/',help='the dir to save logs and models')
